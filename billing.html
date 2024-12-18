@@ -12,15 +12,14 @@
     <!-- Header -->
     <header class="bg-primary text-white py-3">
         <div class="container d-flex justify-content-between align-items-center">
-            <h1 class="m-0">PharmaBill</h1>
+            <h1 class="m-0">PharmaBill Billing</h1>
             <nav>
                 <ul class="nav">
                     <li class="nav-item"><a href="index.html" class="nav-link text-white">Home</a></li>
-                    <li class="nav-item"><a href="billing.html" class="nav-link text-white">Billing</a></li>
+                    <li class="nav-item"><a href="billing.html" class="nav-link text-white active">Billing</a></li>
                     <li class="nav-item"><a href="inventory.html" class="nav-link text-white">Inventory</a></li>
                     <li class="nav-item"><a href="reports.html" class="nav-link text-white">Reports</a></li>
                     <li class="nav-item"><a href="settings.html" class="nav-link text-white">Settings</a></li>
-                    <li class="nav-item"><a href="#logout" class="nav-link text-white">Logout</a></li>
                 </ul>
             </nav>
         </div>
@@ -28,28 +27,42 @@
 
     <!-- Billing Section -->
     <section class="container my-5">
-        <h2 class="text-center">Generate Bills</h2>
-        <form class="row g-3">
-            <div class="col-md-6">
-                <label for="customerName" class="form-label">Customer Name</label>
-                <input type="text" class="form-control" id="customerName" placeholder="Enter customer name">
-            </div>
-            <div class="col-md-6">
-                <label for="phoneNumber" class="form-label">Phone Number</label>
-                <input type="text" class="form-control" id="phoneNumber" placeholder="Enter phone number">
-            </div>
-            <div class="col-md-12">
-                <label for="productDetails" class="form-label">Product Details</label>
-                <textarea class="form-control" id="productDetails" rows="4" placeholder="Enter product details"></textarea>
-            </div>
-            <div class="col-md-6">
-                <label for="amount" class="form-label">Total Amount</label>
-                <input type="number" class="form-control" id="amount" placeholder="Enter total amount">
-            </div>
-            <div class="col-md-6 d-flex align-items-end">
-                <button type="submit" class="btn btn-primary w-100">Generate Bill</button>
-            </div>
-        </form>
+        <h2 class="text-center mb-4">Billing</h2>
+        <!-- Theme Selector -->
+        <div class="mb-3">
+            <label for="themeSelector" class="form-label">Choose Theme</label>
+            <select id="themeSelector" class="form-select">
+                <option value="default">Default</option>
+                <option value="modern">Modern</option>
+                <option value="classic">Classic</option>
+            </select>
+        </div>
+        <!-- Billing Table -->
+        <table class="table table-bordered">
+            <thead class="table-light">
+                <tr>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr contenteditable="true">
+                    <td>Paracetamol</td>
+                    <td>10</td>
+                    <td>$5.00</td>
+                    <td>$50.00</td>
+                </tr>
+                <tr contenteditable="true">
+                    <td>Amoxicillin</td>
+                    <td>5</td>
+                    <td>$12.00</td>
+                    <td>$60.00</td>
+                </tr>
+            </tbody>
+        </table>
+        <button class="btn btn-primary">Print Invoice</button>
     </section>
 
     <!-- Footer -->

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - PharmaBill</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-primary text-white py-3">
+        <div class="container text-center">
+            <h1 class="m-0">PharmaBill - Sign Up</h1>
+        </div>
+    </header>
+
+    <!-- Signup Form -->
+    <section class="container my-5">
+        <h2 class="text-center mb-4">Create Your Account</h2>
+        <form id="signupForm" class="row g-3">
+            <div class="col-md-6">
+                <label for="storeName" class="form-label">Store Name</label>
+                <input type="text" class="form-control" id="storeName" required>
+            </div>
+            <div class="col-md-6">
+                <label for="gstNumber" class="form-label">GST Number</label>
+                <input type="text" class="form-control" id="gstNumber" required>
+            </div>
+            <div class="col-md-6">
+                <label for="address" class="form-label">Address</label>
+                <textarea class="form-control" id="address" rows="3" required></textarea>
+            </div>
+            <div class="col-md-6">
+                <label for="phoneNumber" class="form-label">Phone Number</label>
+                <input type="tel" class="form-control" id="phoneNumber" required>
+            </div>
+            <div class="col-md-6">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="col-md-6">
+                <label for="storeType" class="form-label">Store Type</label>
+                <select id="storeType" class="form-select" required>
+                    <option value="" disabled selected>Select Store Type</option>
+                    <option value="retail">Retail</option>
+                    <option value="wholesale">Wholesale</option>
+                </select>
+            </div>
+            <div class="col-md-6">
+                <label for="category" class="form-label">Category</label>
+                <select id="category" class="form-select" required>
+                    <option value="" disabled selected>Select Category</option>
+                    <option value="pharmacy">Pharmacy</option>
+                    <option value="general">General</option>
+                    <option value="electronics">Electronics</option>
+                    <option value="clothing">Clothing</option>
+                    <option value="grocery">Grocery</option>
+                </select>
+            </div>
+            <div class="col-md-6">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" required>
+            </div>
+            <div class="col-md-6">
+                <label for="confirmPassword" class="form-label">Confirm Password</label>
+                <input type="password" class="form-control" id="confirmPassword" required>
+            </div>
+            <div class="col-12 text-center">
+                <button type="submit" class="btn btn-primary">Sign Up</button>
+            </div>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white text-center py-3">
+        <p class="m-0">&copy; 2024 PharmaBill | All Rights Reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Handle Signup Form Submission
+        document.getElementById('signupForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Account created successfully! Please log in.');
+            window.location.href = 'login.html';
+        });
+    </script>
+</body>
+</html>
